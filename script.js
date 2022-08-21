@@ -21,16 +21,17 @@ for (let index = 0; index < grades.length; index++) {
   console.log(element);
 }
 
+
 function search() {
   let inputValue = document.getElementById("input").value;
+  let filteredGrades =grades.filter((x) => x == inputValue);
+  if(length==0){
   
-  if(inputValue=!grades){
-    
-    console.log(`الدرجة غير موجوده`);
+    console.log(` الدرجة غير موجوده `);
   }
 
   // طبّق الخطوة 7 أسفل هذا الكومنت
-  let filteredGrades =grades.filter((x) => x == inputValue);
+  // let filteredGrades =grades.filter((x) => x == inputValue);
   console.log(filteredGrades)
 }
 
