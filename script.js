@@ -12,9 +12,9 @@ grades.pop
 // طبّق الخطوة 5 في أسفل هذا الكومنت
 grades.push(99)
 // طبّق الخطوة 6 أسفل هذا الكومنت
-// grades.forEach(element => {
-//   all_grades_div.innerHTML += `<div>${element}</div>`;
-// });
+grades.forEach(element => {
+ all_grades_div.innerHTML += `<div>${element}</div>`;
+ });
 
 for (let index = 0; index < grades.length; index++) {
   let element = grades[index];
@@ -23,21 +23,20 @@ for (let index = 0; index < grades.length; index++) {
 
 
 function search() {
-  let inputValue = document.getElementById("input").value;
-  let filteredGrades =grades.filter((x) => x == inputValue);
-  if(length==0){
-  
+  let inputValue = +document.getElementById("input").value;
+
+  if(grades.includes(inputValue) == false){
     console.log(` الدرجة غير موجوده `);
   }
 
   // طبّق الخطوة 7 أسفل هذا الكومنت
-  // let filteredGrades =grades.filter((x) => x == inputValue);
+  let filteredGrades =grades.filter((x) => x == inputValue);
   console.log(filteredGrades)
 }
 
 
 // طبّق الخطوة 8 و 9 أسفل هذا الكومنت
-let randomIndex=Math.floor(Math.random()) * grades.length
+let randomIndex=Math.floor(Math.random() * grades.length)
 // طبّق الخطوة 10 أسفل هذا الكومنت
 random_grade_div.innerHTML=`<div>${grades[randomIndex]}</div>`;
 
